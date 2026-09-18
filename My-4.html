@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMSHRI TGMS MUJAHIDPUR - TIME TABLE 2026-27</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:100%;margin:0;padding:0;font-family:Arial,sans-serif;background:#eef5fa;color:#222;overflow-x:hidden}
+.school-header{width:100%;background:linear-gradient(135deg,#075985,#0f766e);color:white;text-align:center;padding:13px 3px 15px;border-radius:0 0 16px 16px;margin:0}
+.school-header h1{margin:0;padding:0;font-size:20px;font-weight:bold;line-height:1.2;text-align:center;white-space:nowrap}
+.school-header h2{margin:6px 0 0;padding:0;font-size:17px;font-weight:bold;line-height:1.2;text-align:center;white-space:nowrap}
+.school-header p{margin:5px 0 0;padding:0;font-size:12px;line-height:1.2;text-align:center}
+.controls{width:100%;display:flex;justify-content:center;align-items:stretch;gap:7px;padding:9px 5px 5px}
+.control-box{background:white;border-radius:10px;padding:7px;box-shadow:0 2px 7px rgba(0,0,0,.15)}
+.day-box{width:96px;flex-shrink:0}.period-box{flex:1;min-width:0}
+.control-box label{display:block;font-size:11px;font-weight:bold;color:#075985;margin-bottom:4px}
+.control-box select{width:100%;height:36px;border:1px solid #0f766e;border-radius:8px;background:white;font-size:13px;padding:2px 4px}
+.current-title{width:100%;text-align:center;font-size:15px;font-weight:bold;color:#075985;padding:6px 3px 8px}
+.table-container{width:calc(100% - 8px);margin:0 4px;background:white;border-radius:9px;overflow:hidden;box-shadow:0 2px 7px rgba(0,0,0,.15)}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+thead th{background:#1769bd;color:white;font-size:12px;font-weight:bold;text-align:left;padding:7px 7px;border:1px solid #0d4f91}
+thead th:nth-child(1){width:18%}thead th:nth-child(2){width:38%}thead th:nth-child(3){width:44%}
+tbody td{text-align:left;vertical-align:middle;font-size:12px;line-height:1.2;padding:7px 7px;border:1px solid #c5d0da;word-break:break-word;overflow-wrap:break-word}
+tbody tr:nth-child(even){background:#f3f7fb}
+.break-row{text-align:center;font-size:16px;font-weight:bold;color:#075985;padding:16px 5px}
+.break-time{display:block;margin-top:5px;font-size:12px;font-weight:normal;color:#555}
+.footer{text-align:center;font-size:10px;color:#666;padding:9px 3px 14px}
+@media(max-width:600px){.school-header{padding:12px 2px 14px}.school-header h1{font-size:20px;white-space:nowrap;letter-spacing:-.4px}.school-header h2{font-size:17px;white-space:nowrap}.school-header p{font-size:11px}}
+@media(max-width:380px){.school-header h1{font-size:18px;letter-spacing:-.5px}.school-header h2{font-size:15px}.school-header p{font-size:10px}.controls{gap:5px;padding-left:4px;padding-right:4px}.day-box{width:88px}.control-box{padding:6px}.control-box label{font-size:10px}.control-box select{height:34px;font-size:12px}.current-title{font-size:13px}thead th{font-size:11px;padding:6px}tbody td{font-size:11px;padding:6px}}
+@media(max-width:340px){.school-header h1{font-size:16px;letter-spacing:-.6px}.school-header h2{font-size:14px}.school-header p{font-size:9px}.day-box{width:82px}.control-box select{font-size:11px}thead th{font-size:10px}tbody td{font-size:10px;padding:5px}}
+</style>
+</head>
+<body>
+<div class="school-header">
+<h1>🏫 PMSHRI TGMS MUJAHIDPUR</h1>
+<h2>TIME TABLE 2026-27</h2>
+<p>School Timetable • Academic Year 2026-27</p>
+</div>
+<div class="controls">
+<div class="control-box day-box">
+<label>📅 DAY</label>
+<select id="day">
+<option value="Monday">Monday</option>
+<option value="Tuesday">Tuesday</option>
+<option value="Wednesday">Wednesday</option>
+<option value="Thursday">Thursday</option>
+<option value="Friday">Friday</option>
+<option value="Saturday">Saturday</option>
+</select>
+</div>
+<div class="control-box period-box">
+<label>⏰ PERIOD</label>
+<select id="period"></select>
+</div>
+</div>
+<div id="title" class="current-title"></div>
+<div class="table-container">
+<table>
+<thead><tr><th>CLASS</th><th>SUBJECT</th><th>TEACHER</th></tr></thead>
+<tbody id="timetable"></tbody>
+</table>
+</div>
+<div class="footer">PMSHRI TGMS Mujahidpur<br>Academic Year 2026-27</div>
+<script src="my.js"></script>
+</body>
+</html>
